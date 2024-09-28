@@ -82,6 +82,8 @@ def conda_install():
             ('conda remove -qy python=3.9', f'{PURPLE} Removing Python 3.9.19'),
             ('conda install -qy python=3.10.13', f'{PINK} Installing Python 3.10.13'),
             ('pip install psutil aria2 gdown', f'{RED} Installing Python Packages'),
+            ('conda clean -qy --all', None),
+            (f'rm -rf {home}/.cache/*', None)
         ]
 
         for cmd, msg in cmd_list:
