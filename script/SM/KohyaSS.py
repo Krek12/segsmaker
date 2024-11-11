@@ -41,9 +41,9 @@ def webui_req():
         subprocess.run(shlex.split(lines), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     scripts = [
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
-        f"https://github.com/gutris1/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"]
+        f"https://github.com/Krek12/segsmaker/raw/main/script/SM/venv.py {WEBUI}",
+        f"https://github.com/Krek12/segsmaker/raw/main/script/SM/Launcher.py {WEBUI}",
+        f"https://github.com/Krek12/segsmaker/raw/main/script/SM/segsmaker.py {WEBUI}"]
 
     for items in scripts:
         download(items)
