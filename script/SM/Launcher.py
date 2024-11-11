@@ -6,6 +6,7 @@ MARK = Path.home() / '.gutris1/marking.json'
 config = json.load(MARK.open('r'))
 tunnel = config.get('tunnel')
 ui = config.get('ui')
+cwd = Path.cwd()
 
 def launch():
     os.environ['LD_PRELOAD'] = '/home/studio-lab-user/.conda/envs/default/lib/libtcmalloc_minimal.so.4'
@@ -20,13 +21,6 @@ def launch():
             os.system(f"echo -n {end_time} > {timer}")
 
     os.system(cmd)
-
-def kohyass_launch():
-    os.environ['PATH'] = '/tmp/venv-kohya/bin:' + os.environ['PATH']
-    os.environ['LD_PRELOAD'] = '/home/studio-lab-user/.conda/envs/default/lib/libtcmalloc_minimal.so.4'
-    os.environ['LD_LIBRARY_PATH'] = '/tmp/venv-kohya/lib:/home/studio-lab-user/.conda/envs/default/lib:' + os.environ.get('LD_LIBRARY_PATH', '')
-
-    subprocess.run("bash ./gui.sh --headless", shell=True, check=True, stdout=sys.stdout, stderr=sys.stdout)
 
 def sdtrainer_launch():
     os.environ['MPLBACKEND'] = 'gtk3agg'
@@ -64,8 +58,6 @@ if __name__ == '__main__':
             facefusion_launch()
         elif ui == 'SDTrainer':
             sdtrainer_launch()
-        elif ui == 'KohyaSS':
-            kohyass_launch()
         else:
             launch()
     except KeyboardInterrupt:
