@@ -30,7 +30,7 @@ def load_config():
         need_space = 14 * 1024**3
         vnv = vnv_SDT
     elif ui == 'KohyaSS':
-        url = 'https://huggingface.co/pantat88/back_up/resolve/main/venv-kohya.tar.lz4'
+        url = 'https://huggingface.co/pantat88/back_up/resolve/4cbf051697e95b12aba35f66132b763d064df4cd/venv-kohya.tar.lz4?download=true'
         need_space = 14 * 1024**3
         vnv = vnv_KSS
     else:
