@@ -6,8 +6,9 @@ import subprocess, time, os, shlex, json, shutil
 from nenen88 import pull, say, download, clone, tempe
 
 version = "v1.10.1"
-repo = f"git clone -q https://github.com/AUTOMATIC1111/stable-diffusion-webui -b dev"
+repo = "git clone -q https://github.com/AUTOMATIC1111/stable-diffusion-webui"
 
+#
 HOME = Path.home()
 SRC = HOME / '.gutris1'
 CSS = SRC / 'setup.css'
@@ -18,6 +19,13 @@ STP = HOME / '.conda/setup.py'
 tmp = Path('/tmp')
 vnv = tmp / 'venv'
 WEBUI = HOME / 'A1111'
+
+#
+get_ipython().system(repo)
+
+# 
+if (HOME / 'stable-diffusion-webui').exists():
+    os.rename(HOME / 'stable-diffusion-webui', WEBUI)
 
 os.chdir(HOME)
 
