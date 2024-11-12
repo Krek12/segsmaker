@@ -17,7 +17,7 @@ STP = HOME / '.conda/setup.py'
 
 tmp = Path('/tmp')
 vnv = tmp / 'venv'
-WEBUI = HOME / 'A1111'
+WEBUI = HOME / 'stable-diffusion-webui'
 
 os.chdir(HOME)
 
