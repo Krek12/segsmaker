@@ -85,6 +85,7 @@ def multi_widgets():
         f"curl -sLo {ReForge} https://github.com/gutris1/segsmaker/raw/main/script/SM/ReForge.py",
         f"curl -sLo {FaceFusion} https://github.com/gutris1/segsmaker/raw/main/script/SM/FaceFusion.py",
         f"curl -sLo {SDTrainer} https://github.com/gutris1/segsmaker/raw/main/script/SM/SDTrainer.py"
+        f"curl -sLo {KohyaSS} https://github.com/Krek12/segsmaker/raw/main/script/SM/KohyaSS.py"
     ]
 
     load_css()
