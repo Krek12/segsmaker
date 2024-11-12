@@ -6,7 +6,7 @@ import subprocess, time, os, shlex, json, shutil
 from nenen88 import pull, say, download, clone, tempe
 
 version = "v1.10.1"
-repo = f"git clone -q -b {version} https://github.com/gutris1/A1111"
+repo = f"git clone -q https://github.com/AUTOMATIC1111/stable-diffusion-webui A1111"
 
 HOME = Path.home()
 SRC = HOME / '.gutris1'
