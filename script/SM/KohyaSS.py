@@ -5,7 +5,7 @@ from pathlib import Path
 import subprocess, time, os, shlex, json, shutil
 from nenen88 import say, download, tempe
 
-repo = f"git clone --recursive https://github.com/ofirlapi/kohya_ss KohyaSS"
+repo = f"git clone --recursive https://github.com/bmaltais/kohya_ss KohyaSS"
 
 HOME = Path.home()
 SRC = HOME / '.Krek12'
